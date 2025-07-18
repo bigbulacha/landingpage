@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const countdownElement = document.getElementById('countdown');
         if (!countdownElement) return;
 
-        // ATENÇÃO: Defina a data de lançamento aqui!
-        const launchDate = new Date('2025-07-23T00:00:00').getTime();
+        // IMPORTANTE: Defina a data e hora do lançamento aqui!
+        const launchDate = new Date('2025-08-13T00:00:00').getTime();
+
         
         const interval = setInterval(() => {
             const now = new Date().getTime();
@@ -53,13 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const openModalBtn = document.querySelector('.btn-launch'); // Botão que abre o modal.
 
     // Opções para preencher o formulário dinamicamente.
-    const sportOptions = ['Futebol', 'Basquete', 'Vôlei', 'Tênis', 'Corrida', 'Ciclismo', 'Natação', 'Yoga', 'Crossfit'];
+    const sportOptions = ['Corrida', 'Ciclismo', 'Musculação', 'Futebol', 'Tênis', 'Natação', 'Artes Marciais', 'Beach Tennis', 'Surf', 'Escalada', 'Kitesurf', 'Trilha', 'Skate', 'Patins', 'Mergulho', 'Outros']
     const frequencyOptions = ['Diariamente', 'Algumas vezes por semana', 'Uma vez por semana', 'Ocasionalmente'];
-    const budgetOptions = ['Até R$100', 'R$100 - R$300', 'Acima de R$300'];
     const conditionOptions = ['Novo', 'Semi-novo', 'Usado', 'Qualquer'];
 
     let currentStep = 0;
-    const userPreferences = { name: '', email: '', sports: [], frequency: '', budget: '', condition: [] };
+    const userPreferences = { name: '', email: '', sports: [], frequency: '', condition: [] };
 
     // Cria os botões de múltipla escolha para as perguntas do formulário.
     const createOptionButtons = (options, containerId, preferenceKey, isMultiSelect) => {
@@ -110,8 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 1: if (!validateEmailFormat(userPreferences.email)) { alert("Por favor, insira um e-mail válido."); return false; } break;
             case 2: if (userPreferences.sports.length === 0) { alert("Selecione pelo menos um esporte."); return false; } break;
             case 3: if (!userPreferences.frequency) { alert("Selecione uma frequência."); return false; } break;
-            case 4: if (!userPreferences.budget) { alert("Selecione um orçamento."); return false; } break;
-            case 5: if (userPreferences.condition.length === 0) { alert("Selecione pelo menos uma condição."); return false; } break;
+            case 4: if (userPreferences.condition.length === 0) { alert("Selecione pelo menos uma condição."); return false; } break;
         }
         return true;
     };
@@ -161,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!document.getElementById('sports-options').hasChildNodes()) {
             createOptionButtons(sportOptions, 'sports-options', 'sports', true);
             createOptionButtons(frequencyOptions, 'frequency-options', 'frequency', false);
-            createOptionButtons(budgetOptions, 'budget-options', 'budget', false);
             createOptionButtons(conditionOptions, 'condition-options', 'condition', true);
         }
         showStep(currentStep);

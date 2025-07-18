@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Configurações essenciais do documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOVE ON - Marketplace de Artigos Esportivos Usados</title>
-    <meta name="description" content="Compre ou venda artigos esportivos usados com segurança e agilidade. Sustentável, econômico e confiável.">
+    
+    <!-- SEO e Informações da Página -->
+    <title>MoveOn | Marketplace de Artigos Esportivos</title>
+    <meta name="description" content="O marketplace que conecta atletas. Compre e venda artigos usados com segurança e agilidade.">
+    
+    <!-- Folha de Estilos (CSS) -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fontes do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- =================================================================
+         FAVICONS
+         A ordem é importante. O SVG vem primeiro para navegadores modernos.
+    ================================================================== -->
+    
+    <!-- Favicon principal (SVG ) para navegadores modernos -->
+    <link rel="icon" href="favicon-48x48.svg" type="image/svg+xml">
+    
+    <!-- Favicon de fallback (.ico) para navegadores mais antigos -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
 </head>
 <body>
 
+    <!-- =================================================================
+         CABEÇALHO (HEADER)
+         Contém o logo e os links para redes sociais.
+    ================================================================== -->
     <header class="header">
         <nav class="nav-container">
             <div class="nav-logo">
@@ -20,32 +43,55 @@
                 </a>
             </div>
             <div class="nav-links">
-                <a href="#" target="_blank" class="social-icon-link" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <a href="https://www.instagram.com/app.moveon/" target="_blank" class="social-icon-link" aria-label="Instagram">
+                    <img src="instagram.svg" alt="Instagram" class="social-icon-img">
                 </a>
-                <a href="#" target="_blank" class="social-icon-link" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <a href="https://www.tiktok.com/@moveon.app" target="_blank" class="social-icon-link" aria-label="TikTok">
+                    <img src="tiktok.svg" alt="TikTok" class="social-icon-img">
                 </a>
             </div>
         </nav>
     </header>
 
+    <!-- =================================================================
+         CONTEÚDO PRINCIPAL (MAIN )
+         Agrupa todas as seções principais da página.
+    ================================================================== -->
     <main class="main-content">
 
+        <!-- Seção Hero: A primeira dobra do site com o título principal e o contador. -->
         <section id="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Dê uma nova vida ao seu equipamento esportivo</h1>
+                <h1 class="hero-title">"De esportistas para esportistas"</h1>
                 <p class="hero-subtitle">O marketplace que conecta atletas. Compre e venda artigos usados com segurança e agilidade.</p>
                 
                 <div class="launch-card">
                     <p class="launch-card-title">Lançamento em:</p>
                     <div id="countdown" class="countdown"></div>
                     <button class="btn btn-primary btn-launch">Entrar na Lista VIP</button>
-                    <p class="launch-card-guarantee">✓ Garantia de 30 dias</p>
                 </div>
             </div>
         </section>
 
+        <!-- Seção Transforma: Bloco verde com a mensagem sobre o poder do esporte. -->
+        <section id="transforma">
+            <div class="transforma-container">
+                <div class="transforma-text">
+                    <p>Nós acreditamos que</p>
+                    <h2 class="text-dark">“O esporte Transforma.”</h2>
+                    <p>
+                        E queremos transformar o jeito como você encontra produtos e experiências esportivas.
+                        <span class="text-bold">Tudo em um só lugar.</span>
+                    </p>
+                </div>
+                <div class="transforma-action">
+                    <img src="logo-m-circulo.png" alt="Logo M da Move On" class="transforma-logo">
+                    <a href="https://www.instagram.com/app.moveon" target="_blank" class="btn-transforma">Siga a Move on</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Features: Apresenta os benefícios da plataforma (Prático, Econômico, Seguro ). -->
         <section id="features">
             <div class="container">
                 <h2 class="section-title">Uma plataforma completa para atletas</h2>
@@ -62,7 +108,7 @@
                             <img src="icon_economy.png" alt="Ícone Econômico">
                         </div>
                         <h3 class="feature-title">Econômico</h3>
-                        <p class="feature-description">Economize até 70% comprando equipamentos de qualidade em segunda mão.</p>
+                        <p class="feature-description">Economize até 70% comprando equipamentos de qualidade.</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">
@@ -77,23 +123,25 @@
 
     </main>
 
+    <!-- =================================================================
+         RODAPÉ (FOOTER)
+         Contém apenas as informações de copyright.
+    ================================================================== -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 MOVE ON. Todos os direitos reservados.</p>
-            <div class="footer-social-links">
-                <a href="#" target="_blank" class="social-icon-link" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-                <a href="#" target="_blank" class="social-icon-link" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-            </div>
+            <!-- Ícones sociais foram removidos daqui -->
         </div>
     </footer>
 
+    <!-- =================================================================
+         MODAL DE ONBOARDING
+         Formulário pop-up para capturar preferências do usuário.
+    ================================================================== -->
     <div id="onboarding-modal" class="onboarding-modal">
         <div class="onboarding-card">
             <div class="onboarding-card-content">
+                <!-- Barra de Progresso do Formulário -->
                 <div class="progress-container">
                     <div class="progress-bar">
                         <div class="progress-bar-segment"></div><div class="progress-bar-segment"></div><div class="progress-bar-segment"></div>
@@ -102,6 +150,7 @@
                     <p id="step-counter" class="step-counter-text">Passo 1 de 6</p>
                 </div>
 
+                <!-- Container para os Passos do Formulário -->
                 <div id="steps-container">
                     <div class="step-content" data-step="0">
                         <h2 class="step-title">Qual é o seu nome?</h2>
@@ -124,26 +173,21 @@
                         <div id="frequency-options" class="options-grid grid-cols-2"></div>
                     </div>
                     <div class="step-content" data-step="4">
-                        <h2 class="step-title">Qual é o seu orçamento?</h2>
-                        <p class="step-subtitle">Selecione sua faixa de orçamento preferida.</p>
-                        <div id="budget-options" class="options-grid grid-cols-3"></div>
-                    </div>
-                    <div class="step-content" data-step="5">
                         <h2 class="step-title">Qual condição você aceita?</h2>
                         <p class="step-subtitle">Selecione todas as condições aceitáveis.</p>
                         <div id="condition-options" class="options-grid grid-cols-2"></div>
                     </div>
                 </div>
 
+                <!-- Botão de Ação do Formulário -->
                 <div class="card-footer">
-                    <button id="next-step-btn" class="btn btn-primary">
-                        Continuar
-                    </button>
+                    <button id="next-step-btn" class="btn btn-primary">Continuar</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Arquivo JavaScript principal -->
     <script src="script.js"></script>
 
 </body>
